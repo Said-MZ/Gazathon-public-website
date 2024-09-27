@@ -7,7 +7,10 @@ import {
   PersonStandingIcon,
   BuildingIcon,
   HeartCrack,
+  Heart,
 } from "lucide-react";
+import Link from "next/link";
+import { Button } from "../ui/button";
 
 const AnimatedNumber: React.FC<{ value: string }> = ({ value }) => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -36,14 +39,13 @@ const AnimatedNumber: React.FC<{ value: string }> = ({ value }) => {
 };
 
 const AboutHeader: React.FC = () => (
-  <div className="text-center md:text-left mb-16">
-    <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl font-semibold">
-      Why GazaDon?
+  <div className="text-center md:text-left mb-8">
+    <h2 className="text-2xl md:text-4xl tracking-tighter max-w-xl font-semibold mb-3">
+      since 7 october 2023...
     </h2>
-    <p className="text-lg max-w-xl  leading-relaxed tracking-tight text-muted-foreground">
-      GazaDon is a platform that helps hospitals and patients in need. we manage
-      the process of delivering and exchanging medical supplies and equipment
-      between hospitals.
+    <p className="text-md max-w-xl  leading-relaxed tracking-tight text-muted-foreground">
+      the number of injured people in Gaza has increased significantly, and
+      hospitals are in urgent need of medical supplies and equipment.
     </p>
   </div>
 );
@@ -89,6 +91,26 @@ const About: React.FC = () => {
           {About.map((stat, index) => (
             <StatCard key={index} {...stat} />
           ))}
+        </div>
+      </div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+        <div>
+          <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl font-semibold mb-3">
+            Why GazaDon?
+          </h2>
+          <p className="text-lg max-w-xl leading-relaxed tracking-tight text-muted-foreground">
+            GazaDon is a platform that helps hospitals and patients in need. we
+            manage the process of delivering and exchanging medical supplies and
+            equipment between hospitals.
+          </p>
+        </div>
+        <div>
+          <Button asChild className="mt-6">
+            <Link href="/donate">
+              <Heart className="w-4 h-4 mr-2" />
+              Donate
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
