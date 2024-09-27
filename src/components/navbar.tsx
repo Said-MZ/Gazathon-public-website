@@ -171,7 +171,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center">
           <Link href="/">
             <h2 className="text-2xl font-bold">
-              Medi<span className="text-primary">Find</span>
+              Gaza<span className="text-primary">Don</span>
             </h2>
           </Link>
         </div>
