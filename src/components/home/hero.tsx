@@ -1,8 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import HeroImage from "./hero-image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -45,13 +46,18 @@ const Hero = () => {
                 variant="outline"
                 size="lg"
                 className="gap-2 w-full sm:w-auto"
+                asChild
               >
-                <ArrowRight className="w-4 h-4" />
-                About us
+                <Link href="/about">
+                  <ArrowRight className="w-4 h-4" />
+                  About us
+                </Link>
               </Button>
-              <Button size="lg" className="gap-2 w-full sm:w-auto">
-                <ArrowRight className="w-4 h-4" />
-                Get Started
+              <Button size="lg" className="gap-2 w-full sm:w-auto" asChild>
+                <Link href="/donate">
+                  <Heart className="w-4 h-4" />
+                  Donate
+                </Link>
               </Button>
             </motion.div>
           </div>
