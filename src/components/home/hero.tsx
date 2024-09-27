@@ -6,7 +6,7 @@ import HeroImage from "./hero-image";
 
 const Hero = () => {
   return (
-    <div className="w-full pt-12 lg:pt-0">
+    <div className="w-full py-10 lg:pt-0">
       <div className="container mx-auto p-2">
         <div className="flex gap-8 py-20 lg:py-40 items-center justify-between flex-col lg:flex-row">
           <div className="flex gap-4 flex-col lg:w-1/2">

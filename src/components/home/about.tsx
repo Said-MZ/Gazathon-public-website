@@ -84,7 +84,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section className="w-full py-20 lg:py-32 bg-background">
+    <section className="w-full py-10 lg:py-16 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <AboutHeader />
         <div className="grid text-left grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
