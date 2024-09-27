@@ -95,22 +95,24 @@ const About: React.FC = () => {
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-24">
         <div className="text-center w-full mx-auto">
-          <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl font-semibold mb-3 text-center">
+          <h2 className="text-3xl md:text-5xl tracking-tighter  font-semibold mb-3 text-center">
             Why GazaDon?
           </h2>
-          <p className="text-lg max-w-xl leading-relaxed tracking-tight text-muted-foreground text-center">
+          <p className="text-lg leading-relaxed tracking-tight text-muted-foreground text-center max-w-xl block mx-auto">
             GazaDon is a platform that helps hospitals and patients in need. we
             manage the process of delivering and exchanging medical supplies and
             equipment between hospitals.
           </p>
         </div>
         <div>
-          <Button asChild className="mt-6 text-center">
-            <Link href="/donate">
-              <Heart className="w-4 h-4 mr-2" />
-              Donate
-            </Link>
-          </Button>
+          <div className=" w-full text-center">
+            <Button asChild className="mt-6 text-center mx-auto">
+              <Link href="/donate">
+                <Heart className="w-4 h-4 mr-2" />
+                Donate
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>

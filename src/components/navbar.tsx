@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Mail, MoveRight } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 type SubItem = {
@@ -36,7 +35,7 @@ const navigationItems: NavigationItem[] = [
   },
   {
     title: "About",
-    href: "/about",
+    href: "/",
     description: "",
   },
 
@@ -48,8 +47,8 @@ const navigationItems: NavigationItem[] = [
         title: "Donate",
         href: "/donate",
       },
-      { title: "Medicine donation", href: "/donate-medicine" },
-      { title: "Money donation", href: "/donate-money" },
+      { title: "Medicine donation", href: "/donate" },
+      { title: "Money donation", href: "/donate/money" },
     ],
   },
 ];
