@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { ComponentInstanceIcon } from "@radix-ui/react-icons";
 import { CoinsIcon } from "lucide-react";
 
 const imageUrls = [
@@ -128,7 +127,7 @@ const medicines = [
     description: "Angiotensin II receptor blocker for hypertension",
     price: 13,
     neededQuantity: 400,
-    imageUrl: imageUrls[6],
+    imageUrl: imageUrls[0],
   },
   {
     id: 14,
@@ -136,7 +135,7 @@ const medicines = [
     description: "Extended-release diabetes medication",
     price: 16,
     neededQuantity: 300,
-    imageUrl: imageUrls[7],
+    imageUrl: imageUrls[1],
   },
   {
     id: 15,
@@ -144,7 +143,7 @@ const medicines = [
     description: "SSRI for depression and anxiety",
     price: 22,
     neededQuantity: 200,
-    imageUrl: imageUrls[8],
+    imageUrl: imageUrls[2],
   },
 ];
 
