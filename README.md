@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gazathon Public Website
 
-## Getting Started
- 
-First, run the development server:
+A Next.js public website for Gazathon with demo donation flows and bundled demo content.
+
+## 2-minute local setup with Docker
+
+You only need Docker Desktop (or Docker Engine with the Compose plugin). No local Node.js install is required.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repo-url>
+cd Gazathon-public-website
+docker compose up --build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) when the container starts.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The container runs `npm run seed` before starting the production Next.js server. The seed step is intentionally fast and confirms that all demo data is bundled in the app; there is no database or extra service to configure.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To stop the app:
 
-## Learn More
+```bash
+docker compose down
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Local development without Docker
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If you prefer running the app directly on your machine:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm ci
+npm run seed
+npm run dev
+```
 
-## Deploy on Vercel
+Then open [http://localhost:3000](http://localhost:3000).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Useful commands
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run dev        # Start the Next.js dev server
+npm run build      # Build the production app
+npm run start      # Start the standalone production app after building
+npm run smoke      # Smoke-test the built standalone app
+npm run seed       # Verify bundled demo seed data
+docker compose up --build  # Build and run the app in Docker
+```
